@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Event, Function, If Else</title>
+    <link rel = "stylesheet" href = "../assets/style/main.css"/>
+</head>
+<body>
+    <h2>
+        JavaScript - Event, Function, If Else
+    </h2>
+    <div class = "div1">
+        <button id = "Click" onclick="changeText(textChangeBox, Click)">
+            Click Me
+        </button>
+        <button id = "doubleClick" ondblclick="changeText(textChangeBox, doubleClick)">
+            Double Click
+        </button>
+    </div>
+    <div class = "div1">
+        <button id = "mouseUp" onmouseup="changeText(textChangeBox, mouseUp)">
+            Mouse Up
+        </button>
+        <button id = "mouseDown" onmousedown="changeText(textChangeBox, mouseDown)">
+            Mouse Down
+        </button>
+    </div>
+    <div class = "div2">
+        <button id = "mouseOver" onmouseover="changeText(textChangeBox, mouseOver)">
+            Mouse Over
+        </button>
+    </div>
+
+    <center>
+    <button id = "textChangeBox">
+        Active Event Change Text
+    </button>
+    </center>
+</body>
+<script>
+    function changeText(id1, id2){
+        if (id2 == Click)
+            id1.innerHTML = "Active Event Click";
+        else if (id2 == doubleClick)
+            id1.innerHTML = "Active Event Double Click";
+        else if (id2 == mouseDown)
+            id1.innerHTML = "Active Event Mouse Down";
+        else if (id2 == mouseOver)
+            id1.innerHTML = "Active Event Mouse Over";
+        else if (id2 == mouseUp)
+            id1.innerHTML = "Active Event Mouse Up";
+        else
+            id1.innerHTML = "Active Event Change Text";
+    }
+</script>
