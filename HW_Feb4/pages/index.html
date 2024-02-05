@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework Feb4</title>
+  <link rel="stylesheet" href="../assets/style.css"/>
+</head>
+<body>
+  <div class="content">
+    <h1>JavaScript Tutorial Day 3 - Event, Function, If else</h1>
+    <div class="input-group">
+      <input class="input-box" type="number" name="" id="text1" placeholder="0">
+      <input class = "input-num" type="text" id = "sign" placeholder = "+"/>
+      <input class="input-box" type="number" name="" id="text2" placeholder="0">
+      <span>=</span>
+      <input class="input-box" type="number" disabled name="" id="res" placeholder="Result">
+    </div>
+    <div class="button-group">
+      <input type="button" onclick="cal()" value="Calculate" id="calculate">
+      <input type="button" onclick="clears()" value="Clear" id="clear">
+    </div>
+  </div>
+</body>
+<script>
+  let text1 = document.getElementById("text1"); 
+  let text2 = document.getElementById("text2");
+  let sign = document.getElementById("sign");
+  let res = document.getElementById("res");
+
+  let calculate = document.getElementById("calculate");
+  let clear = document.getElementById("clear");
+
+  function cal() {
+    let number1 = Number(text1.value);
+    let number2 = Number(text2.value);
+    if (number1 == 0 && number2 == 0) {
+      alert("Please enter numbers!");
+      return;
+    } else {
+        if (sign.value == '+') 
+            res.value = number1 + number2; 
+        else if (sign.value == "-")
+            res.value = number1 - number2;
+        else if (sign.value == "*")
+            res.value = number1 * number2;
+        else if (sign.value == "/")
+            res.value = number1 / number2;
+    }
+  }
+
+  function clears() {
+    text1.value = "";
+    text2.value = "";
+    res.value = "";
+  }
+</script>
+</html>

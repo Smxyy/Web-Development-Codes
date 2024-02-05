@@ -1,0 +1,96 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+
+.content{
+    max-width: 600px;
+    width: 100%;
+    padding: 30px;
+    background: papayawhip;
+    border: 1px solid #999;
+    border-radius: 18px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.input-group{
+    width: 100%;
+    padding: 10px 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.input-group .input-box{
+    height: 46px;
+    width: 100px;
+    border-radius: 20px;
+    border: none;
+    border: 1px solid #999;
+    outline: none;
+    display: flex;
+    padding: 0 10px;
+    font-size: 18px;
+    text-align: center;
+    background:#fff;
+    color: black;
+}
+
+.input-group .input-num{
+    height: 46px;
+    border: none;
+    border-radius: 10px;
+    border: 1px solid #999;
+    outline: none;
+    width: 20px;
+    text-align: center;
+}
+
+.input-group .input-box:focus{
+    border: 1px solid #a32cf2;
+}
+
+.input-group .input-num:focus{
+    border: 1px solid #a32cf2;
+}
+
+.button-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.button-group input[type = "button"]{
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background: #a32cf2;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.button-group :nth-child(2){
+    background: red !important;
+}
+
+.button-group input[type = "button"]:hover{
+    background: #7021e7;
+}
+
